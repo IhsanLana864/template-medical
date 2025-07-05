@@ -49,12 +49,12 @@
                         <div class="row">
                             <div class="col-12 mb-4">
                                 <label class="form-label">Nama <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control mb-2" name="nama" require placeholder="Nama dokter">
+                                <input type="text" class="form-control mb-2" name="nama" required placeholder="Nama dokter">
                             </div>
 
                             <div class="col-12 mb-4">
                                 <label class="form-label">Jabatan <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control mb-2" name="jabatan" require placeholder="Jabatan">
+                                <input type="text" class="form-control mb-2" name="jabatan" required placeholder="Jabatan">
                             </div>
                         </div>
                         <div class="d-flex align-items-center gap-2 page-header-right-items-wrapper">

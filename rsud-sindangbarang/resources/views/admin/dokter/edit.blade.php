@@ -50,12 +50,12 @@
                         <div class="row">
                             <div class="col-12 mb-4">
                                 <label class="form-label">Nama <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control mb-2" name="nama" require placeholder="Nama dokter" value="{{ old('nama', $dokter->nama) }}">
+                                <input type="text" class="form-control mb-2" name="nama" required placeholder="Nama dokter" value="{{ old('nama', $dokter->nama) }}">
                             </div>
 
                             <div class="col-12 mb-4">
                                 <label class="form-label">Spesifikasi <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control mb-2" name="spesifikasi" require placeholder="Spesifikasi" value="{{ old('spesifikasi', $dokter->spesifikasi) }}">
+                                <input type="text" class="form-control mb-2" name="spesifikasi" required placeholder="Spesifikasi" value="{{ old('spesifikasi', $dokter->spesifikasi) }}">
                             </div>
                         </div>
                         <div class="d-flex align-items-center gap-2 page-header-right-items-wrapper">

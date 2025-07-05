@@ -59,51 +59,49 @@
                                 <div class="form-group d-flex flex-wrap gap-3">
                                     @php
                                         $allDays = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'];
-                                        // Ambil hari yang sudah dipilih jika form di-reload karena error validasi
                                         $selectedDays = old('hari_checkboxes', []);
                                     @endphp
                                     @foreach ($allDays as $day)
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input hari-checkbox" type="checkbox"
-                                                   id="hari-{{ strtolower($day) }}"
-                                                   name="hari_checkboxes[]"
-                                                   value="{{ $day }}"
-                                                   {{ in_array($day, $selectedDays) ? 'checked' : '' }}>
+                                                id="hari-{{ strtolower($day) }}"
+                                                name="hari_checkboxes[]"
+                                                value="{{ $day }}"
+                                                {{ in_array($day, $selectedDays) ? 'checked' : '' }}>
                                             <label class="form-check-label" for="hari-{{ strtolower($day) }}">{{ $day }}</label>
                                         </div>
                                     @endforeach
                                 </div>
-                                {{-- INPUT HIDDEN UNTUK MENYIMPAN HASIL GABUNGAN HARI --}}
-                                <input type="hidden" class="form-control mb-2" id="FinalHari" name="hari" value="{{ old('hari') }}">
+                                <input type="text" class="form-control mb-2" id="FinalHari" name="hari" value="{{ old('hari') }}">
                                 @error('hari')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
 
                             <div class="col-12 mb-4">
-                                <label class="form-label">Jam Pendaftaran Awal <span class="text-danger">*</span></label>
-                                <input type="time" class="form-control mb-2" name="jam_pendaftaran_awal" value="{{ old('jam_pendaftaran_awal') }}" required>
+                                <label class="form-label">Jam Pendaftaran Awal</label>
+                                <input type="time" class="form-control mb-2" name="jam_pendaftaran_awal" value="{{ old('jam_pendaftaran_awal') }}">
                                 @error('jam_pendaftaran_awal')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-12 mb-4">
-                                <label class="form-label">Jam Pendaftaran Akhir <span class="text-danger">*</span></label>
-                                <input type="time" class="form-control mb-2" name="jam_pendaftaran_akhir" value="{{ old('jam_pendaftaran_akhir') }}" required>
+                                <label class="form-label">Jam Pendaftaran Akhir</label>
+                                <input type="time" class="form-control mb-2" name="jam_pendaftaran_akhir" value="{{ old('jam_pendaftaran_akhir') }}">
                                 @error('jam_pendaftaran_akhir')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-12 mb-4">
-                                <label class="form-label">Jam Praktek Awal <span class="text-danger">*</span></label>
-                                <input type="time" class="form-control mb-2" name="jam_praktek_awal" value="{{ old('jam_praktek_awal') }}" required>
+                                <label class="form-label">Jam Praktek Awal</label>
+                                <input type="time" class="form-control mb-2" name="jam_praktek_awal" value="{{ old('jam_praktek_awal') }}">
                                 @error('jam_praktek_awal')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-12 mb-4">
-                                <label class="form-label">Jam Praktek Akhir <span class="text-danger">*</span></label>
-                                <input type="time" class="form-control mb-2" name="jam_praktek_akhir" value="{{ old('jam_praktek_akhir') }}" required>
+                                <label class="form-label">Jam Praktek Akhir</label>
+                                <input type="time" class="form-control mb-2" name="jam_praktek_akhir" value="{{ old('jam_praktek_akhir') }}">
                                 @error('jam_praktek_akhir')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
