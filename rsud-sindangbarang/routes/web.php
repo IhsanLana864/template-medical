@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DokterController;
+use App\Http\Controllers\ManajerialController;
+use App\Http\Controllers\LayananController;
 
 Route::get('/', function () {
     return view('index');
@@ -19,5 +21,8 @@ Route::get('/admin', function () {
     return view('admin.index');
 });
 
-// ADMIN
-Route::resource('dokters', DokterController::class);
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resource('dokter', DokterController::class);
+    Route::resource('manajerial', ManajerialController::class);
+    Route::resource('layanan', LayananController::class);
+});

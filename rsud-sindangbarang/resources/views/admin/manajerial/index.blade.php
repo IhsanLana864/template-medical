@@ -4,11 +4,11 @@
     <div class="page-header">
         <div class="page-header-left d-flex align-items-center">
             <div class="page-header-title">
-                <h5 class="m-b-10">Dokter</h5>
+                <h5 class="m-b-10">Manajerial</h5>
             </div>
             <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('admin.dokter.index') }}">Home</a></li>
-                <li class="breadcrumb-item">Dokter</li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.manajerial.index') }}">Home</a></li>
+                <li class="breadcrumb-item">Manajerial</li>
             </ul>
         </div>
         <div class="page-header-right ms-auto">
@@ -44,7 +44,7 @@
                             </a>
                         </div>
                     </div>
-                    <a href="{{ route('admin.dokter.create') }}" class="btn btn-primary">
+                    <a href="{{ route('admin.manajerial.create') }}" class="btn btn-primary">
                         <i class="feather-plus me-2"></i>
                         <span>New Data</span>
                     </a>
@@ -123,27 +123,27 @@
                 <div class="card stretch stretch-full">
                     <div class="card-body p-0">
                         <div class="table-responsive">
-                            <table class="table table-hover" id="DokterTable">
+                            <table class="table table-hover" id="ManajerialTable">
                                 <thead>
                                     <tr>
                                         <th>No</th>
                                         <th>Nama</th>
-                                        <th>Spesifikasi</th>
+                                        <th>Jabatan</th>
                                         <th class="text-end">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @forelse ($dokters as $dokter)
+                                    @forelse ($manajerials as $manajerial)
                                         <tr class="single-item">
                                             <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $dokter->nama }}</td>
-                                            <td>{{ $dokter->spesifikasi }}</td>
+                                            <td>{{ $manajerial->nama }}</td>
+                                            <td>{{ $manajerial->jabatan }}</td>
                                             <td>
                                                 <div class="hstack gap-2 justify-content-end">
-                                                    <a href="{{ route('admin.dokter.edit', $dokter->id) }}" class="avatar-text avatar-md">
+                                                    <a href="{{ route('admin.manajerial.edit', $manajerial->id) }}" class="avatar-text avatar-md">
                                                         <i class="feather feather-edit-3"></i>
                                                     </a>
-                                                    <form action="{{ route('admin.dokter.destroy', $dokter->id) }}" method="POST" class="d-inline">
+                                                    <form action="{{ route('admin.manajerial.destroy', $manajerial->id) }}" method="POST" class="d-inline">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="avatar-text avatar-md" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
