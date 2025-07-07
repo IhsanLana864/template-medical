@@ -8,6 +8,7 @@ use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SuperAdminController;
 
 
 Route::get('/', function () {
@@ -29,17 +30,16 @@ Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(
     Route::resource('partner', FasilitasController::class);
 });
 
-Route::middleware(['auth', 'super_admin'])->prefix('superadmin')->name('superadmin.')->group(function () {
-    Route::get('/register-admin', [SuperAdminController::class, 'createAdminForm'])->name('register_admin_form'); // Nanti akan kita buat
-    Route::post('/register-admin', [SuperAdminController::class, 'storeAdmin'])->name('register_admin');
+Route::middleware(['auth', 'super_admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::resource('akun', SuperAdminController::class);
 });
 
 
-// Route::middleware('auth')->group(function () {
-//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-// });
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
 require __DIR__.'/auth.php';
 
