@@ -23,10 +23,9 @@
     <nav class="nxl-navigation">
         <div class="navbar-wrapper">
             <div class="m-header">
-                {{-- Path diperbaiki --}}
-                <a href="{{ url('/') }}" class="b-brand"> {{-- Menggunakan url('/') untuk link ke root --}}
-                    <img src="{{ asset('assets/images/logo-full.png') }}" alt="" class="logo logo-lg" />
-                    <img src="{{ asset('assets/images/logo-abbr.png') }}" alt="" class="logo logo-sm" />
+                <a href="#" class="b-brand">
+                    <img src="{{ asset('assets/imgs/LOGO.png') }}" alt="" class="logo logo-lg" style="width: 20%;" />
+                    <img src="{{ asset('assets/imgs/LOGO.png') }}" alt="" class="logo logo-sm" style="width: 50%;" />
                 </a>
             </div>
             <div class="navbar-content">
@@ -35,14 +34,20 @@
                         <label>Navigation</label>
                     </li>
                     <li class="nxl-item nxl-hasmenu">
+                        <a href="{{ route('admin.dashboard') }}" class="nxl-link">
+                            <span class="nxl-micon"><i class="feather-trello"></i></span>
+                            <span class="nxl-mtext">Dashboards</span>
+                        </a>
+                    </li>
+                    <li class="nxl-item nxl-hasmenu">
                         <a href="{{ route('admin.dokter.index') }}" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-airplay"></i></span>
+                            <span class="nxl-micon"><i class="feather-user"></i></span>
                             <span class="nxl-mtext">Dokter</span>
                         </a>
                     </li>
                     <li class="nxl-item nxl-hasmenu">
                         <a href="{{ route('admin.manajerial.index') }}" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-airplay"></i></span>
+                            <span class="nxl-micon"><i class="feather-user"></i></span>
                             <span class="nxl-mtext">Manajerial</span>
                         </a>
                     </li>
@@ -54,26 +59,21 @@
                     </li>
                     <li class="nxl-item nxl-hasmenu">
                         <a href="{{ route('admin.kegiatan.index') }}" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-airplay"></i></span>
+                            <span class="nxl-micon"><i class="feather-archive"></i></span>
                             <span class="nxl-mtext">Kegiatan</span>
                         </a>
                     </li>
                     <li class="nxl-item nxl-hasmenu">
-                        <a href="{{ route('admin.fasilitas.index') }}" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-airplay"></i></span>
+                        <a href="{{ route('admin.facilitie.index') }}" class="nxl-link">
+                            <span class="nxl-micon"><i class="feather-archive"></i></span>
                             <span class="nxl-mtext">Fasilitas</span>
                         </a>
                     </li>
                     <li class="nxl-item nxl-hasmenu">
-                        <a href="javascript:void(0);" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-airplay"></i></span>
-                            <span class="nxl-mtext">Dashboards</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
+                        <a href="{{ route('admin.partner.index') }}" class="nxl-link">
+                            <span class="nxl-micon"><i class="feather-link"></i></span>
+                            <span class="nxl-mtext">Media Partner</span>
                         </a>
-                        <ul class="nxl-submenu">
-                            {{-- Path diperbaiki --}}
-                            <li class="nxl-item"><a class="nxl-link" href="{{ url('index.html') }}">CRM</a></li> {{-- Asumsi index.html adalah aset statis --}}
-                            <li class="nxl-item"><a class="nxl-link" href="{{ url('analytics.html') }}">Analytics</a></li> {{-- Asumsi analytics.html adalah aset statis --}}
-                        </ul>
                     </li>
                 </ul>
             </div>
@@ -113,24 +113,6 @@
                 </div>
             <div class="header-right ms-auto">
                 <div class="d-flex align-items-center">
-                    <div class="dropdown nxl-h-item nxl-header-search">
-                        <a href="javascript:void(0);" class="nxl-head-link me-0" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-                            <i class="feather-search"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end nxl-h-dropdown nxl-search-dropdown">
-                            <div class="input-group search-form">
-                                <span class="input-group-text">
-                                    <i class="feather-search fs-6 text-muted"></i>
-                                </span>
-                                <input type="text" class="form-control search-input-field" placeholder="Search...." />
-                                <span class="input-group-text">
-                                    <button type="button" class="btn-close"></button>
-                                </span>
-                            </div>
-                            <div class="dropdown-divider mt-0"></div>
-                        </div>
-                    </div>
-
                     <div class="nxl-h-item dark-light-theme">
                         <a href="javascript:void(0);" class="nxl-head-link me-0 dark-button">
                             <i class="feather-moon"></i>
@@ -142,17 +124,14 @@
 
                     <div class="dropdown nxl-h-item">
                         <a href="javascript:void(0);" data-bs-toggle="dropdown" role="button" data-bs-auto-close="outside">
-                            {{-- Path diperbaiki --}}
-                            <img src="{{ asset('assets/images/avatar/1.png') }}" alt="user-image" class="img-fluid user-avtar me-0" />
+                            <h6 class="text-dark mb-0">{{ Auth::user()->name }}</h6>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end nxl-h-dropdown nxl-user-dropdown">
                             <div class="dropdown-header">
                                 <div class="d-flex align-items-center">
-                                    {{-- Path diperbaiki --}}
-                                    <img src="{{ asset('assets/images/avatar/1.png') }}" alt="user-image" class="img-fluid user-avtar" />
                                     <div>
-                                        <h6 class="text-dark mb-0">Alexandra Della <span class="badge bg-soft-success text-success ms-1">PRO</span></h6>
-                                        <span class="fs-12 fw-medium text-muted">alex.della@outlook.com</span>
+                                        <h6 class="text-dark mb-0">{{ Auth::user()->email }}</h6>
+                                        <span class="fs-12 fw-medium text-muted">{{ Auth::user()->role }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -161,11 +140,13 @@
                                 <span>Account Settings</span>
                             </a>
                             <div class="dropdown-divider"></div>
-                            {{-- Path diperbaiki --}}
-                            <a href="{{ url('auth-login-minimal.html') }}" class="dropdown-item"> {{-- Asumsi auth-login-minimal.html adalah aset statis --}}
+                            <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="dropdown-item">
                                 <i class="feather-log-out"></i>
                                 <span>Logout</span>
-                            </a>
+                            </button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -178,10 +159,7 @@
         </div>
         <footer class="footer">
             <p class="fs-11 text-muted fw-medium text-uppercase mb-0 copyright">
-                <span>Copyright ©</span>
-                <script>
-                    document.write(new Date().getFullYear());
-                </script>
+                <span>Copyright ©2025</span>
             </p>
         </footer>
         </main>

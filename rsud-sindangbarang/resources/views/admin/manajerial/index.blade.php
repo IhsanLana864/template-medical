@@ -20,30 +20,6 @@
                     </a>
                 </div>
                 <div class="d-flex align-items-center gap-2 page-header-right-items-wrapper">
-                    <a href="javascript:void(0);" class="btn btn-icon btn-light-brand" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                        <i class="feather-bar-chart"></i>
-                    </a>
-                    
-                    <div class="dropdown">
-                        <a class="btn btn-icon btn-light-brand" data-bs-toggle="dropdown" data-bs-offset="0, 12" data-bs-auto-close="outside">
-                            <i class="feather-paperclip"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <a href="javascript:void(0);" class="dropdown-item">
-                                <i class="bi bi-filetype-pdf me-3"></i>
-                                <span>PDF</span>
-                            </a>
-                            <a href="javascript:void(0);" class="dropdown-item">
-                                <i class="bi bi-filetype-exe me-3"></i>
-                                <span>Excel</span>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="javascript:void(0);" class="dropdown-item">
-                                <i class="bi bi-printer me-3"></i>
-                                <span>Print</span>
-                            </a>
-                        </div>
-                    </div>
                     <a href="{{ route('admin.manajerial.create') }}" class="btn btn-primary">
                         <i class="feather-plus me-2"></i>
                         <span>New Data</span>
@@ -54,64 +30,6 @@
                 <a href="javascript:void(0)" class="page-header-right-open-toggle">
                     <i class="feather-align-right fs-20"></i>
                 </a>
-            </div>
-        </div>
-    </div>
-    <div id="collapseOne" class="accordion-collapse collapse page-header-collapse">
-        <div class="accordion-body pb-2">
-            <div class="row">
-                <div class="col-xxl-3 col-md-6">
-                    <div class="card stretch stretch-full">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <a href="javascript:void(0);" class="fw-bold d-block">
-                                    <span class="d-block">Paid</span>
-                                    <span class="fs-20 fw-bold d-block">78/100</span>
-                                </a>
-                                <div class="progress-1"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-3 col-md-6">
-                    <div class="card stretch stretch-full">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <a href="javascript:void(0);" class="fw-bold d-block">
-                                    <span class="d-block">Unpaid</span>
-                                    <span class="fs-20 fw-bold d-block">38/50</span>
-                                </a>
-                                <div class="progress-2"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-3 col-md-6">
-                    <div class="card stretch stretch-full">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <a href="javascript:void(0);" class="fw-bold d-block">
-                                    <span class="d-block">Overdue</span>
-                                    <span class="fs-20 fw-bold d-block">15/30</span>
-                                </a>
-                                <div class="progress-3"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-3 col-md-6">
-                    <div class="card stretch stretch-full">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <a href="javascript:void(0);" class="fw-bold d-block">
-                                    <span class="d-block">Draft</span>
-                                    <span class="fs-20 fw-bold d-block">3/10</span>
-                                </a>
-                                <div class="progress-4"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
