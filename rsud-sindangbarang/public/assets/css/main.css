@@ -257,37 +257,45 @@ svg path {
 
 :root {
     /**
-  @font family declaration
-  */
-    --rr-ff-body: "Roboto", sans-serif;
-    --rr-ff-heading: "Roboto", sans-serif;
-    --rr-ff-roboto: "Roboto", sans-serif;
+  /* @font family declaration */
+    --rr-ff-body: "Inter", sans-serif;
+    --rr-ff-heading: "Poppins", sans-serif;
+    --rr-ff-roboto: "Inter", sans-serif; /* bisa dipakai sebagai fallback */
     --rr-ff-fontawesome: "Font Awesome 6 Pro";
+
+    --rr-ff-body: "Inter", sans-serif;
+    --rr-ff-heading: "Inter", sans-serif;
+    --rr-ff-roboto: "Inter", sans-serif;
+
     /**
   @color declaration
   */
-    --rr-common-white: #ffffff;
-    --rr-common-black: #000000;
-    --rr-common-placeholder: #4a5764;
-    --rr-common-selection: #6bfadf;
-    --rr-color-white: #000;
-    --rr-color-900: #071c3c;
-    --rr-color-800: #646464;
-    --rr-color-700: #2a2a2a;
-    --rr-color-200: #e4e5e5;
-    --rr-color-100: #f2f7fd;
-    --rr-body-primary: #ffffff;
+    /* Warna Dasar */
+    --rr-common-white: #FFFFFF;
+    --rr-common-black: #333333;
+    --rr-common-placeholder: #646464;
+    --rr-common-selection: #6BFBE0;
+
+    /* Warna Tema Utama */
     --rr-theme-primary: #009999;
-    --rr-theme-secondary: #c9f3ff;
-    --rr-theme-glow: #169091;
-    --rr-theme-green: #739e77;
-    --rr-theme-black: #02110b;
-    --rr-heading-primary: #071c3c;
-    --rr-text-body: #646464;
+    --rr-theme-secondary: #6BFBE0;
+    --rr-theme-accent-red: #D0021B;
+
+    /* Warna Latar & Body */
+    --rr-body-primary: #F8F9FA;
+
+    /* Warna Teks */
+    --rr-heading-primary: #333333;
+    --rr-text-body: #333333;
+    --rr-menu-primary: #333333;
+
+    /* Variabel Lainnya */
     --rr-shadow-primary: 0px 5px 60px rgba(0, 0, 0, 0.05);
-    --rr-border-primary: 1px solid #185ec8;
-    --rr-section-1: #185ec8;
-    --rr-menu-primary: #071c3c;
+    --rr-border-primary: 1px solid #009999;
+
+    /* === PERBAIKAN DI SINI === */
+    /* Variabel ini dibutuhkan oleh kelas 'theme-bg-color-900' pada banner */
+    --rr-color-900: #216e6e;
     /**
   @font weight declaration
   */
@@ -1743,8 +1751,18 @@ a.rr-a-btn:hover {
     position: relative;
     z-index: 55;
 }
+/* Mengatur ukuran dan posisi ikon hati di dalam judul bagian */
 .section__subtitle img {
-    margin-right: 5px;
+    width: auto;      /* Berikan lebar yang spesifik */
+    height: auto;     /* Biarkan tinggi menyesuaikan agar tidak penyot */
+    margin-right: 8px; /* Beri sedikit jarak dengan teks di kanannya */
+
+    /* Trik penting: agar ikon sejajar dengan teks di sampingnya */
+    vertical-align: middle;
+
+    /* Sedikit penyesuaian posisi ke bawah agar pas di tengah teks */
+    position: relative;
+    top: -2px;
 }
 
 .title-animation {
@@ -5088,8 +5106,39 @@ a.ui-button:active {
 .header__area {
     background-color: transparent;
 }
+/* =================================================================== */
+/* == FIX LOGO RESPONSIVE (FINAL) == */
+/* =================================================================== */
+
+/* 1. Mengatur wadah logo agar fleksibel */
+.header__left,
 .header__logo {
-    max-width: 144px;
+    display: flex;
+    align-items: center; /* Memastikan semua item di kiri header sejajar di tengah secara vertikal */
+    flex-shrink: 0; /* Mencegah wadah logo menyusut */
+}
+
+/* 2. Mengatur ukuran logo di dalam wadahnya (SANGAT PENTING) */
+.header__logo .logo img {
+    /* Ukuran untuk Desktop */
+    max-height: 55px; /* Batasi TINGGI MAKSIMUM logo. Ini akan menjadi acuan utama. */
+    width: auto;      /* Biarkan lebar mengikuti tinggi agar rasio aspek terjaga (TIDAK PENYOT). */
+    max-width: 100%;  /* Pastikan logo tidak pernah lebih lebar dari wadahnya. */
+
+    /* Transisi untuk perubahan ukuran yang mulus */
+    transition: max-height 0.3s ease;
+}
+
+/* 3. Menyesuaikan ukuran logo saat header menjadi 'sticky' (setelah scroll) */
+.header__area.header-sticky .header__logo .logo img {
+    max-height: 50px; /* Buat logo sedikit lebih kecil saat header menempel agar lebih ringkas. */
+}
+
+/* 4. Menyesuaikan ukuran logo untuk layar yang lebih kecil (Tablet & Mobile) */
+@media (max-width: 991px) {
+    .header__logo .logo img {
+        max-height: 45px; /* Ukuran yang ideal untuk navbar mobile. */
+    }
 }
 .header__main {
     display: -webkit-box;
@@ -5662,10 +5711,12 @@ a.ui-button:active {
     background-position: left bottom;
     background-repeat: no-repeat;
 }
+
 .banner-2 .container {
     position: relative;
     z-index: 1;
 }
+
 .banner-2__shape {
     position: absolute;
     content: "";
@@ -5681,34 +5732,72 @@ a.ui-button:active {
     -webkit-filter: blur(217px);
     filter: blur(217px);
 }
+
 .banner-2__space {
     padding: 205px 0 110px;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px),
-    only screen and (min-width: 576px) and (max-width: 767px),
-    (max-width: 575px) {
+
+.banner-2__content {
+    max-width: 503px;
+}
+
+.banner-2__content h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72.8185px; /* Ukuran untuk desktop besar */
+    line-height: 1.15; /* Menggunakan unit relatif untuk line-height lebih baik */
+    text-transform: capitalize;
+}
+
+/* Penyesuaian untuk Tablet (landscape) */
+@media only screen and (max-width: 1199px) {
+    .banner-2__content h1 {
+        font-size: 60px; /* Ukuran font sedikit lebih kecil */
+    }
+}
+
+/* Penyesuaian untuk Tablet (portrait) */
+@media only screen and (max-width: 991px) {
     .banner-2__space {
         padding-top: 160px;
         padding-bottom: 90px;
     }
-}
-.banner-2__content {
-    max-width: 503px;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px),
-    only screen and (min-width: 576px) and (max-width: 767px),
-    (max-width: 575px) {
+
     .banner-2__content {
         max-width: 100%;
         margin-bottom: 60px;
+        text-align: center; /* Menengahkan teks di layar kecil */
+    }
+
+    .banner-2__content .rr-btn__wrapper {
+        justify-content: center !important; /* Menengahkan tombol */
+    }
+
+    .banner-2__content h1 {
+        font-size: 48px; /* Ukuran font lebih kecil untuk tablet */
+        line-height: 1.2;
+    }
+
+    .banner-2__media {
+        display: none; /* Menyembunyikan gambar di samping agar fokus ke teks */
     }
 }
-.banner-2__content h1 {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 72.8185px;
-    line-height: 83px;
-    text-transform: capitalize;
+
+/* Penyesuaian untuk Ponsel */
+@media only screen and (max-width: 575px) {
+    .banner-2__space {
+        padding-top: 140px;
+        padding-bottom: 80px;
+    }
+
+    .banner-2__content h1 {
+        font-size: 36px; /* Ukuran font yang pas untuk ponsel */
+        line-height: 1.25;
+    }
+
+    .banner-2__content p {
+        font-size: 16px; /* Menyesuaikan ukuran font paragraf jika perlu */
+    }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .banner-2__content h1 {
@@ -5802,6 +5891,60 @@ a.ui-button:active {
     .banner-2__media-shape {
         display: none;
     }
+}
+
+/* Posisi awal header sebelum scroll */
+.header__area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: transparent; /* Awalnya transparan */
+    transition: all 0.4s ease-in-out;
+}
+
+.header__area .header__main {
+    padding: 25px 0;
+    transition: padding 0.4s ease-in-out;
+}
+
+/* Gaya untuk header saat sticky (setelah scroll) */
+.header__area.header-sticky {
+    position: fixed; /* Membuat header menempel di atas */
+    background: #2B6AB2; /* Warna Biru Utama dari palet warna Anda */
+    animation: slideDown 0.5s ease-out;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header__area.header-sticky .header__main {
+    padding: 15px 0; /* Membuat header sedikit lebih ramping saat sticky */
+}
+
+/* Animasi slide down untuk header */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Pastikan warna teks menu tetap terlihat saat background solid */
+.header__area.header-sticky .main-menu-2 nav ul li > a {
+    color: #FFFFFF; /* Putih */
+}
+
+.header__area.header-sticky .rr-header-contact-btn__text p,
+.header__area.header-sticky .rr-header-contact-btn__text h5 a,
+.header__area.header-sticky .rr-header-contact-btn__icon i {
+    color: #FFFFFF !important; /* Putih */
+}
+
+/* Mengubah warna hamburger bar di background solid agar terlihat */
+.header__area.header-sticky .bar-icon span {
+    background-color: #FFFFFF;
 }
 
 /*----------------------------------------*/

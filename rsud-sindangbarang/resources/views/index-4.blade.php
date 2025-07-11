@@ -16,12 +16,16 @@
     <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
     <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/vendor/fontawesome-pro.css">
-    <link rel="stylesheet" href="assets/css/vendor/spacing.css"> 
+    <link rel="stylesheet" href="assets/css/vendor/spacing.css">
     <link rel="stylesheet" href="assets/css/plugins/odometer-theme-default.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body class="body-4">
+
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
 
 <!-- preloader start -->
 <div id="preloader" class="preloader__4">
@@ -99,7 +103,7 @@
 <!-- Offcanvas area start -->
 
 <!-- Header area start -->
-<!-- <header>
+<header>
     <div id="header-sticky" class="header__area header-5">
         <div class="container">
             <div class="mega__menu-wrapper p-relative">
@@ -279,7 +283,7 @@
                                 </ul>
                             </nav>
                         </div>
-                    </div> -->
+                    </div>
 
                     <div class="header__right">
                         <div class="header__action d-flex align-items-center">
@@ -488,7 +492,7 @@
                                     <p class="mb-0">Ultimately, psychology and counseling play a vital role in helping people lead more fulfilling and balanced lives</p>
                                 </div>
                             </div>
-                            
+
                             <div class="about-us-6__item">
                                 <div class="about-us-6__item-icon">
                                     <i class="fa-solid fa-check"></i>
@@ -754,7 +758,7 @@
                         </button>
 
                         <button class="clients-testimonial-2__slider__arrow-next d-flex align-items-center justify-content-center">
-                            <i class="fa-solid fa-arrow-right"></i>                                    
+                            <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
@@ -772,7 +776,7 @@
                             </div>
                             <div class="clients-testimonial-2__item-content">
                                 <p>Adipiscing elit, sed do emod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam  nostrud exercitation ullamco</p>
-    
+
                                 <div class="clients-testimonial-2__author">
                                     <h4><a href="appoinment.html">Leo Scott</a></h4>
                                     <span>The Walt Disney Company</span>
@@ -790,7 +794,7 @@
                             </div>
                             <div class="clients-testimonial-2__item-content">
                                 <p>Adipiscing elit, sed do emod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam  nostrud exercitation ullamco</p>
-    
+
                                 <div class="clients-testimonial-2__author">
                                     <h4><a href="appoinment.html">Fill Nathan</a></h4>
                                     <span>The Walt Disney Company</span>
@@ -808,7 +812,7 @@
                             </div>
                             <div class="clients-testimonial-2__item-content">
                                 <p>Adipiscing elit, sed do emod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam  nostrud exercitation ullamco</p>
-    
+
                                 <div class="clients-testimonial-2__author">
                                     <h4><a href="appoinment.html">Jonathan Blu</a></h4>
                                     <span>The Walt Disney Company</span>
@@ -826,7 +830,7 @@
                             </div>
                             <div class="clients-testimonial-2__item-content">
                                 <p>Adipiscing elit, sed do emod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam  nostrud exercitation ullamco</p>
-    
+
                                 <div class="clients-testimonial-2__author">
                                     <h4><a href="appoinment.html">Wade Warren</a></h4>
                                     <span>The Walt Disney Company</span>
@@ -844,7 +848,7 @@
                             </div>
                             <div class="clients-testimonial-2__item-content">
                                 <p>Adipiscing elit, sed do emod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam  nostrud exercitation ullamco</p>
-    
+
                                 <div class="clients-testimonial-2__author">
                                     <h4><a href="appoinment.html">Leo Scott</a></h4>
                                     <span>The Walt Disney Company</span>
@@ -862,7 +866,7 @@
                             </div>
                             <div class="clients-testimonial-2__item-content">
                                 <p>Adipiscing elit, sed do emod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam  nostrud exercitation ullamco</p>
-    
+
                                 <div class="clients-testimonial-2__author">
                                     <h4><a href="appoinment.html">Wade Warren</a></h4>
                                     <span>The Walt Disney Company</span>
@@ -870,7 +874,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="swiper-slide">
                         <div class="clients-testimonial-2__item">
                             <div class="clients-testimonial-2__icon">
@@ -881,7 +885,7 @@
                             </div>
                             <div class="clients-testimonial-2__item-content">
                                 <p>Adipiscing elit, sed do emod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam  nostrud exercitation ullamco</p>
-    
+
                                 <div class="clients-testimonial-2__author">
                                     <h4><a href="appoinment.html">Jonathan Blu</a></h4>
                                     <span>The Walt Disney Company</span>
@@ -899,7 +903,7 @@
                             </div>
                             <div class="clients-testimonial-2__item-content">
                                 <p>Adipiscing elit, sed do emod tempor incididunt ut labored etos dolore magna aliquant. Ut enim ad minim veniam  nostrud exercitation ullamco</p>
-    
+
                                 <div class="clients-testimonial-2__author">
                                     <h4><a href="appoinment.html">Fill Nathan</a></h4>
                                     <span>The Walt Disney Company</span>
@@ -1023,7 +1027,7 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <div class="appointment-4-top__item">
                             <div class="appointment-4-top__item-content">
                                 <div class="appointment-4-top__item-content-icon">
@@ -1035,7 +1039,7 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <div class="appointment-4-top__item">
                             <div class="appointment-4-top__item-content">
                                 <div class="appointment-4-top__item-content-icon">
@@ -1047,7 +1051,7 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <div class="appointment-4-top__item">
                             <div class="appointment-4-top__item-content">
                                 <div class="appointment-4-top__item-content-icon">
@@ -1058,7 +1062,7 @@
                                     <h6 class="title-animation">serenity work</h6>
                                 </div>
                             </div>
-        
+
                         </div>
                     </div>
                 </div>
@@ -1117,7 +1121,7 @@
                                         <textarea name="textarea" id="textarea" placeholder="Message here.."></textarea>
                                     </div>
                                 </div>
-    
+
                                 <div class="col-12">
                                     <button type="submit" class="rr-btn rr-btn__green mt-0">
                                         <span class="btn-wrap">
@@ -1220,7 +1224,7 @@
 
                 <div class="col-lg-2 col-6">
                     <div class="footer-4__widget footer-4__widget-item-2">
-                        <div class="footer-4__widget-title"> 
+                        <div class="footer-4__widget-title">
                             <h4>Services</h4>
                         </div>
                         <div class="footer-4__link">

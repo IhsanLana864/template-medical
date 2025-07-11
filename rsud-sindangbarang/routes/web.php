@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/layanan', function () {
+    return view('layanan');
+});
+
+Route::get('/index-4', function () {
+    return view('index-4');
+});
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
