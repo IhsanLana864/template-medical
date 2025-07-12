@@ -24,6 +24,36 @@ Route::get('/index-4', function () {
 });
 
 
+
+// Route Profil
+Route::get('/tentang-kami', function () {
+    return view('tentang-kami');
+})->name('tentang.kami');
+
+Route::get('/Manajemen', function () {
+    return view('manajemen');
+})->name('manajemen');
+
+Route::get('/dokter', function () {
+    return view('dokter');
+})->name('dokter');
+
+// Route lainnya
+Route::get('/kegiatan', function () {
+    return view('kegiatan');
+})->name('kegiatan');
+
+Route::get('/berita', function () {
+    return view('berita');
+})->name('berita');
+
+Route::get('/e-survey', function () {
+    return view('e-survey');
+})->name('e-survey');
+
+
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

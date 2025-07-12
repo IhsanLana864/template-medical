@@ -29,9 +29,9 @@
     class GSAPAnimation {
         static Init() {
             /*title-animation*/
-            $('.title-animation').length && this.sectionTitleAnimation('.title-animation'); 
+            $('.title-animation').length && this.sectionTitleAnimation('.title-animation');
         }
-        
+
         static sectionTitleAnimation(activeClass) {
             let sectionTitleLines = gsap.utils.toArray(activeClass);
 
@@ -51,8 +51,8 @@
                 gsap.set(sectionTextLine, { perspective: 100 });
                 itemSplitted.split({ type: "words" })
                 tl.from(itemSplitted.words, {
-                    opacity: 0, 
-                    autoAlpha: 0, 
+                    opacity: 0,
+                    autoAlpha: 0,
                     transformOrigin: "top center -50",
                     y: "10px",
                     duration: 0.9,
@@ -140,8 +140,8 @@
     });
 
     /*======================================
-      Body overlay Js
-      ========================================*/
+    Body overlay Js
+    ========================================*/
     $(".body-overlay").on("click", function () {
         $(".offcanvas__area").removeClass("opened");
         $(".body-overlay").removeClass("opened");
@@ -317,7 +317,7 @@
             delay: 3000,
         }
     });
-    
+
     /*testimonial-3__slider***/
     let testimonial_3__slider = new Swiper(".testimonial-3__slider", {
         slidesPerView: 1,

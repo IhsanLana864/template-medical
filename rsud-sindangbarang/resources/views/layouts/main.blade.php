@@ -107,58 +107,6 @@
     </div>
     <!-- Backtotop end -->
 
-    <!-- Offcanvas area start -->
-    <div class="fix">
-        <div class="offcanvas__area">
-            <div class="offcanvas__wrapper">
-                <div class="offcanvas__content">
-                    <div class="offcanvas__top d-flex justify-content-between align-items-center">
-                        <div class="offcanvas__logo">
-                            <a href="index.html">
-                                <img src="assets/imgs/logo/logo-rsud.png" alt="logo not found">
-                            </a>
-                        </div>
-                        <div class="offcanvas__close">
-                            <button class="offcanvas-close-icon animation--flip">
-                                <span class="offcanvas-m-lines">
-                                    <span class="offcanvas-m-line line--1"></span><span
-                                        class="offcanvas-m-line line--2"></span><span
-                                        class="offcanvas-m-line line--3"></span>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="mobile-menu fix"></div>
-                    <div class="offcanvas__social">
-                        <h4 class="offcanvas__title mb-20">Subscribe & Follow</h4>
-                        <p class="mb-30">Medical practices evolved over millennia, from ancient civilizations like
-                            Egypt and Mesopotamia to the groundbreaking</p>
-                        <ul class="header-top-socail-menu d-flex">
-                            <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                            <li><a href="https://vimeo.com/"><i class="fa-brands fa-vimeo-v"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="offcanvas__btn d-sm-none">
-                        <div class="header__btn-wrap">
-                            <a href="https://themeforest.net/user/rrdevs/portfolio"
-                                class="rr-btn rr-btn__theme rr-btn__theme-white mt-40 mt-sm-35 mt-xs-30">
-                                <span class="btn-wrap">
-                                    <span class="text-one">Purchase Now</span>
-                                    <span class="text-two">Purchase Now</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="offcanvas__overlay"></div>
-    <div class="offcanvas__overlay-white"></div>
-    <!-- Offcanvas area start -->
-
     <!-- Header area start -->
     <header>
         <div id="header-sticky" class="header__area header-2">
@@ -177,19 +125,19 @@
                                 <div class="main-menu main-menu-2">
                                     <nav id="mobile-menu">
                                         <ul>
-                                            <li><a href="index.html">Beranda</a></li>
-                                            <li><a href="layanan.html">Layanan & Fasilitas</a></li>
+                                            <li><a href="/">Beranda</a></li>
+                                            <li><a href="/layanan">Layanan & Fasilitas</a></li>
                                             <li>
                                                 <a href="javascript:void(0)">Profil</a>
                                                 <ul class="submenu">
-                                                    <li><a href="tentang-kami.html">Tentang Kami</a></li>
-                                                    <li><a href="manajemen.html">Manajemen</a></li>
-                                                    <li><a href="dokter.html">Daftar Dokter</a></li>
+                                                    <li><a href="/tentang-kami">Tentang Kami</a></li>
+                                                    <li><a href="/Manajemen">Manajemen</a></li>
+                                                    <li><a href="/dokter">Daftar Dokter</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="kegiatan.html">Kegiatan</a></li>
-                                            <li><a href="artikel.html">Berita & Artikel</a></li>
-                                            <li><a href="survey.html">e-Survey</a></li>
+                                            <li><a href="/kegiatan">Kegiatan</a></li>
+                                            <li><a href="/berita">Berita & Artikel</a></li>
+                                            <li><a href="/e-survey">e-Survey</a></li>
                                         </ul>
                                     </nav>
                                 </div>

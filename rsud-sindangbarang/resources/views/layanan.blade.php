@@ -71,7 +71,7 @@
                     <div class="col-lg-6 col-xl-4">
                         <div class="psychology__item">
                             <div class="psychology__wrapper">
-                                <img src="./assets/imgs/psychology/rawat-jalan.svg" alt="Ikon Rawat Jalan">
+                                <img src="./assets/imgs/latest-services-2/services-1.png" alt="Ikon Rawat Jalan">
                                 <h4>Instalasi Rawat Jalan</h4>
                             </div>
                             <p class="mb-0">Pelayanan medis oleh dokter spesialis dan umum di berbagai poliklinik tanpa
@@ -81,7 +81,7 @@
                     <div class="col-lg-6 col-xl-4">
                         <div class="psychology__item">
                             <div class="psychology__wrapper">
-                                <img src="./assets/imgs/psychology/rawat-inap.svg" alt="Ikon Rawat Inap">
+                                <img src="./assets/imgs/latest-services-2/services-2.png" alt="Ikon Rawat Inap">
                                 <h4>Instalasi Rawat Inap</h4>
                             </div>
                             <p class="mb-0">Perawatan intensif dan observasi berkelanjutan dengan fasilitas kamar yang
@@ -91,7 +91,7 @@
                     <div class="col-lg-6 col-xl-4">
                         <div class="psychology__item">
                             <div class="psychology__wrapper">
-                                <img src="./assets/imgs/psychology/igd.svg" alt="Ikon Gawat Darurat">
+                                <img src="./assets/imgs/latest-services-2/services-3.png" alt="Ikon Gawat Darurat">
                                 <h4>Gawat Darurat 24 Jam</h4>
                             </div>
                             <p class="mb-0">Tim medis kami siap 24/7 untuk menangani kondisi darurat medis umum dan
@@ -105,82 +105,73 @@
         <!-- Detailed Polyclinic Services -->
         <section class="latest-services-2 section-space__top ">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section__title-wrapper mb-60 mb-30">
-                            <h5 class="section__subtitle title-glow mb-15 mb-xs-10 title-animation"><img
-                                    src="assets/imgs/ask-quesiton/heart-3.png" alt="Ikon Hati" class="img-fluid"> Poliklinik
-                                Spesialis</h5>
-                            <h2 class="section__title color-theme-black font-medium mb-10 title-animation">Temukan Layanan
-                                Poliklinik Kami</h2>
+             <div class="row">
+                <div class="col-12">
+                    <div class="section__title-wrapper text-center mb-60">
+                         <h2 class="section__title color-theme-black mb-10 title-animation">Dokumentasi Kegiatan Kami</h2>
+                         <p>Berikut adalah beberapa kegiatan yang telah kami laksanakan sebagai bagian dari komitmen kami kepada masyarakat.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-minus-30">
+                <div class="col-xl-6">
+                    <div class="latest-services-2__item">
+                        <div class="latest-services-2__media wow clip-a-z">
+                            <img src="./assets/imgs/latest-services-2/latest-services-1.jpg" alt="Penyuluhan Kesehatan">
+                        </div>
+                        <div class="latest-services-2__content">
+                            <div class="latest-services-2__wrapper">
+                                <img src="./assets/imgs/latest-services-2/services-1.png" alt="ikon kegiatan">
+                                <h4><a href="service-details.html">Penyuluhan Kesehatan di Desa</a></h4>
+                            </div>
+                            <p class="mb-0">Kami secara rutin mengadakan penyuluhan untuk meningkatkan kesadaran masyarakat akan pentingnya pola hidup sehat.</p>
                         </div>
                     </div>
                 </div>
-                <div class="row mb-minus-30">
-                    <div class="col-xl-6">
-                        <div class="latest-services-2__item">
-                            <div class="latest-services-2__media wow clip-a-z">
-                                <img src="./assets/imgs/latest-services-2/penyakit-dalam.jpg"
-                                    alt="Poliklinik Penyakit Dalam">
+                <div class="col-xl-6">
+                    <div class="latest-services-2__item">
+                        <div class="latest-services-2__media wow clip-a-z">
+                            <img src="./assets/imgs/latest-services-2/latest-services-2.jpg" alt="Bakti Sosial">
+                        </div>
+                        <div class="latest-services-2__content">
+                            <div class="latest-services-2__wrapper">
+                                <img src="./assets/imgs/latest-services-2/services-2.png" alt="ikon kegiatan">
+                                <h4><a href="service-details.html">Bakti Sosial Donor Darah</a></h4>
                             </div>
-                            <div class="latest-services-2__content">
-                                <div class="latest-services-2__wrapper">
-                                    <img src="./assets/imgs/latest-services-2/services-1.png" alt="ikon">
-                                    <h4><a href="service-details.html">Poliklinik Penyakit Dalam</a></h4>
-                                </div>
-                                <p class="mb-0">Penanganan komprehensif untuk berbagai penyakit organ dalam dewasa,
-                                    seperti diabetes, hipertensi, dan gangguan pencernaan.</p>
-                            </div>
+                            <p class="mb-0">Bekerja sama dengan PMI, kami menyelenggarakan kegiatan donor darah untuk membantu sesama yang membutuhkan.</p>
                         </div>
                     </div>
-                    <div class="col-xl-6">
-                        <div class="latest-services-2__item">
-                            <div class="latest-services-2__media wow clip-a-z">
-                                <img src="./assets/imgs/latest-services-2/bedah.jpg" alt="Poliklinik Bedah">
+                </div>
+                <div class="col-xl-6">
+                    <div class="latest-services-2__item">
+                        <div class="latest-services-2__media wow clip-a-z">
+                            <img src="./assets/imgs/latest-services-2/latest-services-3.jpg" alt="Pelatihan Medis">
+                        </div>
+                        <div class="latest-services-2__content">
+                            <div class="latest-services-2__wrapper">
+                                <img src="./assets/imgs/latest-services-2/services-3.png" alt="ikon kegiatan">
+                                <h4><a href="service-details.html">Pelatihan Internal Tenaga Medis</a></h4>
                             </div>
-                            <div class="latest-services-2__content">
-                                <div class="latest-services-2__wrapper">
-                                    <img src="./assets/imgs/latest-services-2/services-2.png" alt="ikon">
-                                    <h4><a href="service-details.html">Poliklinik Bedah</a></h4>
-                                </div>
-                                <p class="mb-0">Menyediakan layanan konsultasi dan tindakan bedah untuk berbagai kondisi
-                                    medis yang memerlukan intervensi operatif.</p>
-                            </div>
+                            <p class="mb-0">Peningkatan kompetensi dan pengetahuan tenaga medis adalah prioritas kami untuk memberikan layanan terbaik.</p>
                         </div>
                     </div>
-                    <div class="col-xl-6">
-                        <div class="latest-services-2__item">
-                            <div class="latest-services-2__media wow clip-a-z">
-                                <img src="./assets/imgs/latest-services-2/obgyn.jpg"
-                                    alt="Poliklinik Obstetri dan Ginekologi">
-                            </div>
-                            <div class="latest-services-2__content">
-                                <div class="latest-services-2__wrapper">
-                                    <img src="./assets/imgs/latest-services-2/services-3.png" alt="ikon">
-                                    <h4><a href="service-details.html">Poliklinik Obstetri & Ginekologi</a></h4>
-                                </div>
-                                <p class="mb-0">Layanan kesehatan kewanitaan, mulai dari pemeriksaan kehamilan,
-                                    persalinan, hingga penanganan masalah ginekologi.</p>
-                            </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="latest-services-2__item">
+                        <div class="latest-services-2__media wow clip-a-z">
+                            <img src="./assets/imgs/latest-services-2/latest-services-4.jpg" alt="Senam Bersama">
                         </div>
-                    </div>
-                    <div class="col-xl-6">
-                        <div class="latest-services-2__item">
-                            <div class="latest-services-2__media wow clip-a-z">
-                                <img src="./assets/imgs/latest-services-2/gigi-mulut.jpg" alt="Poliklinik Gigi dan Mulut">
+                        <div class="latest-services-2__content">
+                            <div class="latest-services-2__wrapper">
+                                <img src="./assets/imgs/latest-services-2/services-4.png" alt="ikon kegiatan">
+                                <h4><a href="service-details.html">Senam Sehat Bersama Masyarakat</a></h4>
                             </div>
-                            <div class="latest-services-2__content">
-                                <div class="latest-services-2__wrapper">
-                                    <img src="./assets/imgs/latest-services-2/services-4.png" alt="ikon">
-                                    <h4><a href="service-details.html">Poliklinik Kesehatan Gigi & Mulut</a></h4>
-                                </div>
-                                <p class="mb-0">Perawatan gigi dan mulut untuk dewasa dan anak, termasuk pembersihan
-                                    karang gigi, penambalan, dan pencabutan.</p>
-                            </div>
+                            <p class="mb-0">Mengajak masyarakat untuk aktif bergerak dan menjaga kebugaran melalui kegiatan senam bersama setiap akhir pekan.</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </section>
         <!-- latest-services-2 area end -->
 

@@ -5160,6 +5160,16 @@ a.ui-button:active {
     }
 }
 
+#mobile-menu {
+    display: none;
+  }
+  #mobile-menu.active {
+    display: block;
+    background: #203a43;
+    padding: 20px;
+  }
+
+
 .bar-icon {
     width: 26px;
     height: 18px;
