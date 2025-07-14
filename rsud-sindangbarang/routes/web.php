@@ -10,90 +10,62 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SuperAdminController;
 
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Di sini Anda bisa mendaftarkan rute web untuk aplikasi Anda.
+|
+*/
+// Halaman utama
+Route::view('/', 'index')->name('beranda');
 
-Route::get('/', function () {
-    return view('index');
+// Halaman lainnya
+Route::view('/layanan', 'layanan')->name('layanan');
+Route::view('/kegiatan', 'kegiatan')->name('kegiatan');
+Route::view('/berita', 'berita')->name('berita');
+Route::view('/e-survey', 'e-survey')->name('e-survey');
+
+// Rute untuk Halaman Profil (dikelompokkan)
+Route::prefix('profil')->name('profil.')->group(function () {
+    Route::view('/tentang-kami', 'profil.tentang-kami')->name('tentang-kami');
+    Route::view('/manajemen', 'profil.manajemen')->name('manajemen');
+    Route::view('/dokter', 'profil.dokter')->name('dokter');
 });
 
-Route::get('/layanan', function () {
-    return view('layanan');
-});
-
-Route::get('/index-4', function () {
-    return view('index-4');
-});
-
-
-
-// Route Profil
-Route::get('/tentang-kami', function () {
-    return view('tentang-kami');
-})->name('tentang.kami');
-
-Route::get('/Manajemen', function () {
-    return view('manajemen');
-})->name('manajemen');
-
-Route::get('/dokter', function () {
-    return view('dokter');
-})->name('dokter');
-
-// Route lainnya
-Route::get('/kegiatan', function () {
-    return view('kegiatan');
-})->name('kegiatan');
-
-Route::get('/berita', function () {
-    return view('berita');
-})->name('berita');
-
-Route::get('/e-survey', function () {
-    return view('e-survey');
-})->name('e-survey');
-
-
-
-
+// Rute untuk Halaman Dashboard Pengguna yang sudah login
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// ADMIN ROUTE
-Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(function () {
-    Route::get('/', [DashboardController::class, 'dashboard'])->name('dashboard');
-    Route::resource('dokter', DokterController::class);
-    Route::resource('manajerial', ManajerialController::class);
-    Route::resource('layanan', LayananController::class);
-    Route::resource('kegiatan', KegiatanController::class);
-    Route::resource('facilitie', FasilitasController::class);
-    Route::resource('partner', FasilitasController::class);
-});
-
-Route::middleware(['auth', 'super_admin'])->prefix('admin')->name('admin.')->group(function () {
-    Route::resource('akun', SuperAdminController::class);
-});
-
-
+// Rute untuk mengelola profil pengguna yang sedang login
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+// Rute untuk Panel Admin (dikelompokkan dan dilindungi middleware)
+Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
 
-// Route::get('/', function () {
-//     return view('index');
-// });
+    // Rute yang bisa diakses oleh Admin & Super Admin
+    Route::middleware('is_admin')->group(function () {
+        Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+        Route::resource('dokter', DokterController::class);
+        Route::resource('manajerial', ManajerialController::class);
+        Route::resource('layanan', LayananController::class);
+        Route::resource('kegiatan', KegiatanController::class);
+        Route::resource('facilitie', FasilitasController::class);
+        Route::resource('partner', FasilitasController::class); // Pertimbangkan untuk controller terpisah
+    });
 
-// Route::get('/e-survey', function () {
-//     return view('e-survey');
-// });
+    // Rute yang HANYA bisa diakses oleh Super Admin
+    Route::middleware('super_admin')->group(function () {
+        Route::resource('akun', SuperAdminController::class);
+    });
+});
 
-// Route::get('/tes', function () {
-//     return view('tes');
-// });
 
-// Route::get('/admin', function () {
-//     return view('admin.index');
-// });
+// Memuat rute untuk otentikasi (login, register, dll.)
+require __DIR__ . '/auth.php';

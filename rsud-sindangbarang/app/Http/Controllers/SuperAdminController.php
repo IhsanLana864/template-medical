@@ -58,6 +58,8 @@ class SuperAdminController extends Controller
         return redirect()->route('admin.akun.index')->with('success', 'Data berhasil diperbarui!');
     }
 
+
+
     public function destroy(User $user)
     {
         $user->delete();
@@ -65,3 +67,4 @@ class SuperAdminController extends Controller
         return redirect()->route('admin.akun.index')->with('success', 'Data berhasil dihapus!');
     }
 }
+

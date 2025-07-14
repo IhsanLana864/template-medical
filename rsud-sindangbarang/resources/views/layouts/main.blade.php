@@ -10,18 +10,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/favicon.svg">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/animate.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/vendor/fontawesome-pro.css">
-    <link rel="stylesheet" href="assets/css/vendor/spacing.css">
-    <link rel="stylesheet" href="assets/css/plugins/odometer-theme-default.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/scss/layout/pages/_about-us.scss">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/swiper.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/fontawesome-pro.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/spacing.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/odometer-theme-default.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('assets/scss/layout/pages/_about-us.scss') }}">
 </head>
 
 <body class="body-2">
@@ -49,44 +52,44 @@
                     <div class="search__wrapper">
                         <div class="search__top d-flex justify-content-between align-items-center">
                             <div class="search__logo">
-                                <a href="index.html">
-                                    <img src="assets/imgs/logo/logo-rsud.png" alt="img">
+                                <a href="{{ url('/') }}">
+                                    <img src="{{ asset('assets/imgs/logo/logo-rsud.png') }}" alt="Logo RSUD">
                                 </a>
                             </div>
-                            <div class="search__close">
-                                <button type="button" class="search__close-btn search-close-btn">
-                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                        <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
+                        </div>
+                        <div class="search__close">
+                            <button type="button" class="search__close-btn search-close-btn">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="search__form">
+                        <form action="#">
+                            <div class="search__input">
+                                <input class="search-input-field" type="text" placeholder="Type here to search...">
+                                <span class="search-focus-border"></span>
+                                <button type="submit">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path
+                                            d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
+                                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </button>
                             </div>
-                        </div>
-                        <div class="search__form">
-                            <form action="#">
-                                <div class="search__input">
-                                    <input class="search-input-field" type="text"
-                                        placeholder="Type here to search...">
-                                    <span class="search-focus-border"></span>
-                                    <button type="submit">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                            <path
-                                                d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
-                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- search popup end -->
 
@@ -117,7 +120,7 @@
                             <div class="header__logo">
                                 <a href="index.html">
                                     <div class="logo">
-                                        <img src="assets/imgs/logo/logo-rsud.png" alt="Logo RSUD Sindangbarang">
+                                        <img src="{{ asset('assets/imgs/logo/logo-rsud.png') }}" alt="Logo RSUD">
                                     </div>
                                 </a>
                             </div>
@@ -130,9 +133,10 @@
                                             <li>
                                                 <a href="javascript:void(0)">Profil</a>
                                                 <ul class="submenu">
-                                                    <li><a href="/tentang-kami">Tentang Kami</a></li>
-                                                    <li><a href="/Manajemen">Manajemen</a></li>
-                                                    <li><a href="/dokter">Daftar Dokter</a></li>
+                                                    <li><a href="{{ route('profil.tentang-kami') }}">Tentang Kami</a>
+                                                    </li>
+                                                    <li><a href="{{ route('profil.manajemen') }}">Manajemen</a></li>
+                                                    <li><a href="{{ route('profil.dokter') }}">Daftar Dokter</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="/kegiatan">Kegiatan</a></li>
@@ -186,14 +190,13 @@
     <footer>
         <section class="footer-2__area-common theme-bg-color-900 overflow-hidden"
             data-background="assets/imgs/footer-2/background.png">
-            <div class="container">
+            <div class="containeri">
                 <div class="row mb-minus-50">
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-2__widget footer-2__widget-item-1">
                             <div class="footer-2__logo mb-30 mb-xs-25">
                                 <a href="index.html">
-                                    <img class="img-fluid" src="assets/imgs/logo/logo-rsud.png" alt="logo not found">
-                                </a>
+                                    <img src="{{ asset('assets/imgs/logo/logo-rsud.png') }}" alt="Logo RSUD"> </a>
                             </div>
 
                             <div class="footer-2__content">
@@ -304,28 +307,28 @@
     <!-- Footer area end -->
 
     <!-- JS here -->
-    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/plugins/waypoints.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/plugins/meanmenu.min.js"></script>
-    <script src="assets/js/plugins/odometer.min.js"></script>
-    <script src="assets/js/plugins/swiper.min.js"></script>
-    <script src="assets/js/plugins/wow.js"></script>
-    <script src="assets/js/vendor/magnific-popup.min.js"></script>
-    <script src="assets/js/vendor/type.js"></script>
-    <script src="assets/js/plugins/nice-select.min.js"></script>
-    <script src="assets/js/vendor/jquery-ui.min.js"></script>
-    <script src="assets/js/vendor/jquery.appear.js"></script>
-    <script src="assets/js/plugins/parallax.min.js"></script>
-    <script src="assets/js/plugins/parallax-scroll.js"></script>
-    <script src="assets/js/plugins/gsap.min.js"></script>
-    <script src="assets/js/plugins/ScrollTrigger.min.js"></script>
-    <script src="assets/js/plugins/SplitText.js"></script>
-    <script src="assets/js/plugins/tween-max.min.js"></script>
-    <script src="assets/js/plugins/draggable.min.js"></script>
-    <script src="assets/js/plugins/smoothscroll.js"></script>
-    <script src="assets/js/vendor/ajax-form.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{{ asset('assets/js/vendor/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/meanmenu.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/odometer.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/swiper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/wow.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/type.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/nice-select.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/jquery.appear.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/parallax.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/parallax-scroll.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/gsap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/ScrollTrigger.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/SplitText.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/tween-max.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/draggable.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/smoothscroll.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/ajax-form.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>

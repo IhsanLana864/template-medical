@@ -20,7 +20,7 @@
                                     <span class="text-two">Gawat Darurat 24 Jam</span>
                                 </span>
                             </a>
-                            <a href="about-us.html" class="readmore">Tentang Kami
+                            <a href="{{ route('profil.tentang-kami') }}" class="readmore">Tentang Kami
                                 <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -34,7 +34,7 @@
                 <div class="col-lg-5">
                     <div class="banner-2__media">
                         <div class="banner-2__media-shape upDown"></div>
-                        <img class="img-fluid" src="assets/imgs/banner-2/banner-2.png"
+                        <img class="img-fluid" src="{{ asset('assets/imgs/index/rsud-index.png') }}"
                             alt="Dokter dan perawat RSUD Sindangbarang">
                     </div>
                 </div>
@@ -51,11 +51,11 @@
                                 data-effect="mfp-move-from-top vertical-middle">
                                 <i class="fa-solid fa-play zooming"></i>
                             </a>
-                            <img src="assets/imgs/about-us-2/about-us-1.jpg" class="img-fluid"
+                            <img src="{{ asset('assets/imgs/index/rsud-index2.png') }}" class="img-fluid"
                                 alt="Fasilitas RSUD Sindangbarang">
                         </div>
                         <div class="about-us-2__media-image-2">
-                            <img src="assets/imgs/about-us-2/about-us-2.jpg" class="img-fluid"
+                            <img src="{{ asset('assets/imgs/index/rsud-index2.1.png') }}" class="img-fluid"
                                 alt="Kegiatan RSUD Sindangbarang">
                             <div class="circle upDown">
                                 <svg width="111" height="111" viewBox="0 0 111 111" fill="none"
@@ -199,7 +199,7 @@
                             <div class="swiper-slide">
                                 <div class="doctor__item position-relative overflow-hidden">
                                     <div class="doctor__item-media">
-                                        <img src="./assets/imgs/doctor/doctor-item-1.jpg" class="img-fluid"
+                                        <img src="{{ asset('assets/imgs/index/dokter-1.png') }}" class="img-fluid"
                                             alt="dr.M.Lucky N Prameswara,Sp.PD">
                                     </div>
                                     <div class="doctor__item-content">
@@ -213,7 +213,7 @@
                             <div class="swiper-slide">
                                 <div class="doctor__item position-relative overflow-hidden">
                                     <div class="doctor__item-media">
-                                        <img src="./assets/imgs/doctor/doctor-item-2.jpg" class="img-fluid"
+                                        <img src="{{ asset('assets/imgs/index/dokter-1.png') }}" class="img-fluid"
                                             alt="dr.Teguh Karyadi, Sp.B">
                                     </div>
                                     <div class="doctor__item-content">
@@ -227,7 +227,7 @@
                             <div class="swiper-slide">
                                 <div class="doctor__item position-relative overflow-hidden">
                                     <div class="doctor__item-media">
-                                        <img src="./assets/imgs/doctor/doctor-item-3.jpg" class="img-fluid"
+                                        <img src="{{ asset('assets/imgs/index/dokter-1.png') }}" class="img-fluid"
                                             alt="dr.Tendi Robby Setia, Sp.OG.">
                                     </div>
                                     <div class="doctor__item-content">
@@ -241,7 +241,7 @@
                             <div class="swiper-slide">
                                 <div class="doctor__item position-relative overflow-hidden">
                                     <div class="doctor__item-media">
-                                        <img src="./assets/imgs/doctor/doctor-item-3.jpg" class="img-fluid"
+                                        <img src="{{ asset('assets/imgs/index/dokter-1.png') }}" class="img-fluid"
                                             alt="drg. Ridho Akhri Prianto">
                                     </div>
                                     <div class="doctor__item-content">
@@ -283,16 +283,16 @@
                         <div class="panel wow"></div>
                         <div class="our-projects__item__content">
                             <div class="our-projects__item__content-media">
-                                <img src="./assets/imgs/our-project/our-project-1.jpg" class="img-fluid"
+                                <img src="{{ asset('assets/imgs/index/fasilitas-1.png') }}" class="img-fluid"
                                     alt="Foto Kegiatan 1">
                             </div>
                             <div class="our-projects__item__content-icon">
-                                <a href="gallery-details.html">
+                                <a href="/portofolio">
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                             </div>
                             <div class="our-projects__item__content-text">
-                                <h4 class="title-animation"><a href="gallery-details.html">Nama Kegiatan/Fasilitas</a>
+                                <h4 class="title-animation"><a href="/portofolio">Nama Kegiatan/Fasilitas</a>
                                 </h4>
                                 <p>Deskripsi Singkat</p>
                             </div>
@@ -304,7 +304,7 @@
                         <div class="panel wow"></div>
                         <div class="our-projects__item__content">
                             <div class="our-projects__item__content-media">
-                                <img src="./assets/imgs/our-project/our-project-2.jpg" class="img-fluid"
+                                <img src="{{ asset('assets/imgs/index/gedung-loundry.png') }}" class="img-fluid"
                                     alt="Foto Kegiatan 2">
                             </div>
                             <div class="our-projects__item__content-icon">
@@ -438,7 +438,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="appointment-2__media">
-                        <img class="img-fluid" src="assets/imgs/appointment/appointment.png" alt="Formulir Pendaftaran">
+                        <img class="img-fluid" src="{{ asset('assets/imgs/index/form-dokter.png') }}" alt="Formulir Pendaftaran">
                     </div>
                 </div>
             </div>
